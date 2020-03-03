@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% extends 'base.html' %}
+    {% block title %}<title>Album details</title>{% endblock %}
+</head>
+<body>
+<h3>{{req_album.First_Name}}</h3>
+<h4>{{req_album.Last_Name}}</h4>
+
+{% comment %}
+<ul>
+    {% for song in req_album.song_set.all %}
+    <li>{{ song.song_title}} - {{song.file_type}}</li>
+    {% endfor %}
+</ul>
+{% endcomment %}
+{% block body %}
+<!-- Using Form in design-->
+{% if error_message %}
+<p><strong> {{ error_message }} </strong></p>
+{% endif %}
+
+
+{% endblock %}
+
+
+</body>
+</html>

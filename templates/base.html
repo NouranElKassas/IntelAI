@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}<title>Title</title>{% endblock %}
+
+    {% load staticfiles %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js " ></script>
+    <link rel="stylesheet" type="text/css" href="{%static 'myPro3/style.css'%}">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js "></script>
+</head>
+<body>
+
+<!--Header-->
+<!-- Create a blank navigation bar-->
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <!-- Create three dashes while resize the screen(toggle button-->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{% url 'myPro3:index' %}">Viberr</a>
+        </div>
+        <!--Item in Header-->
+        <!--Create collapse(hidden button if not active) div to hold the button and search form -->
+        <div class="collapse navbar-collapse" id="topNavBar">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="{% url 'myPro3:index' %}">
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;Allowed Persons
+
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#">
+                        <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span>&nbsp;Prevented Persons
+
+                    </a>
+                </li>
+              <li class="">
+                    <a href="#">
+                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>&nbsp;View Visitors
+
+                    </a>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search" action="#" method="get">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="q" value="" title="">
+                </div>
+                <button type="submit" class="btn btn-primary" ><strong>Search</strong></button>
+            </form>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                    <a href="{% url 'myPro3:album-add' %}">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;Add Allowed Person
+                    </a>
+                </li>
+                <li class="">
+                    <a href="{% url 'myPro3:index' %}">
+                        <span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp;Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+{% block body %}
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+{% extends 'base.html' %}
+{% block title %}<title>Allowed Persons</title>{% endblock %}
+</head>
+
+<body>
+{% block body %}
+{% if all_album %}
+    <div class="albums-container container-fluid">
+        <div class="row">
+           {% for album_name in all_album %}
+               <div class="col-lg-2">
+                    <div class="thumbnail">
+                        <!-- Album log-->
+                        <a href="{% url 'myPro3:details' album_name.id %}">
+                            <img src="{{ album_name.Photo_recognition.url }}" class="img-responsive">
+                        </a>
+                        <img src="/media/myPro3/18.jpg"  class="img-fluid" alt="Responsive image" >
+                        <div class="caption">
+                            <h4 >{{ album_name.First_Name }}</h4>
+                            <h4 >{{ album_name.Last_Name }}</h4>
+                            <h4>{{ album_name.Title_Relation }}</h4>
+
+                            <!--Details-->
+                            <a href="{% url 'myPro3:details' album_name.id %}" class="btn btn-primary btn-sm">View Details</a>
+                            <!--delete-->
+                            <form action="{% url 'myPro3:album-delete' album_name.id %}" method="post" style="display: inline;">
+                                {% csrf_token %}
+                                <input type="hidden" name="album_id" value="{{ album_name.id }}"/>
+                                <button type="submit" class="btn btn-danger btn-sm">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </button>
+                            </form>
+
+                        </div>
+                    </div>
+               </div>
+
+        </div>
+    </div>
+
+
+
+
+
+        {% endfor %}
+{% else %}
+    <h2>There is no album to display</h2>
+{% endif %}
+{% endblock %}
+
+</body>
+
