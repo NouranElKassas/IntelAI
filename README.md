@@ -9,7 +9,7 @@ The example we tried is a magic eye detects who is infront of your door so if th
     1. we take all the video recorded and classify this video to images.
     2. those images we identify the faces in them
     3. We save those images in a folder called 'media/unknown'
-    4. We use to enter a CNN Classifier phase that use to detect if this person is illagble or not by search if this person is allowed in 'media/allowed' which contained the allowed people
+    4. We use to enter a CNN Classifier phase that use to detect if this person is illagble or not by search if this person is allowed in 'media/allowed' which contained the allowed people(half way their)
     5. The application contains a detailed description about each one whom is allowed to enter the home and from here we take all the new data set of the people whom are illagable or not based on the owner's needs
     6. The application contains charts and diagrams to show some statistics as a monitoring services
     7. The application contains an sms service used to generate a new sms when someone newly come using twillio.
