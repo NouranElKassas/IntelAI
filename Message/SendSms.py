@@ -2,8 +2,8 @@ import datetime
 import os
 from twilio.rest import Client
 
-sid = 'AC704449781a470b6f0bf9a888fe5245d0'
-authToken = 'c8f0575f7ac5642968c0da1bbbeaf446'
+sid = os.environ['SID']
+authToken = os.environ['AUTH']
 
 client = Client(sid, authToken)
 
