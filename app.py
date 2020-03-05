@@ -64,7 +64,7 @@ def draw_boxes(frame, result, args, width, height):
                 xmax = int(box[5] * width)
                 ymax = int(box[6] * height)
                 
-            cv2.imwrite('img_result/box'+str(randint(0,1000))+'.png',cv2.rectangle(frame, (xmin, ymin), (xmax, ymax), args.c, 1))
+            cv2.imwrite('imedia/unknown/box'+str(randint(0,1000))+'.png',cv2.rectangle(frame, (xmin, ymin), (xmax, ymax), args.c, 1))
             i+=1
             return cv2.rectangle(frame, (xmin, ymin), (xmax, ymax), args.c, 1)
         except:
