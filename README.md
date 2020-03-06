@@ -22,8 +22,8 @@ The example we tried is a magic eye detects who is infront of your door so if th
     4. Optimize our model and flow to detect people in less processing time.
 
 # Run the model 
-'''bash
+```bash
 python app.py -m face-detection-adas-0001.xml -ct 0.6 -c blue
-'''
+```
 
 # Run application kindly read the ApplicationREADME.md 
