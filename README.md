@@ -1,21 +1,84 @@
-# Magic Eye
-This application use to detect the faces in the video or a streaming camera and get the faces from this video or stream.
-The example we tried is a magic eye detects who is infront of your door so if this person is illagable to enter or not. We used an openvino pre trained model  	face-detection-adas-0001 and a CNN model to detect if this person can entered this place or not.
+{% comment "This comment section will be deleted in the generated project" %}
 
-# Process Flow:
-# Now
+# [Magic Eye Robot][docs]
 
-    Now, we are testing the main idea.
-    1. we take all the video recorded and classify this video to images.
-    2. those images we identify the faces in them
-    3. We save those images in a folder called 'media/unknown'
-    4. We use to enter a CNN Classifier phase that use to detect if this person is illagble or not by search if this person is allowed in 'media/allowed' which contained the allowed people(half way their)
-    5. The application contains a detailed description about each one whom is allowed to enter the home and from here we take all the new data set of the people whom are illagable or not based on the owner's needs
-    6. The application contains charts and diagrams to show some statistics as a monitoring services
-    7. The application contains an sms service used to generate a new sms when someone newly come using twillio.
 
-# Future Plan
-    1. Make a job dynamically detects when  something new happened
-    2. Integrate the Systems together (Front end, Backend, Models, etc.)
-    3. Run this project on AWS
-    4. Optimize our model and flow to detect people in less processing time.
+
+**Magic Eye Robot.**
+
+## Features
+
+* Ready Bootstrap-themed pages
+* User Registration/Sign up
+* Better Security 
+* Logging/Debugging Helpers
+* Works on Python 3 and Django 2 as Back-end
+* Formatted with [Black](https://github.com/chakertriangle)
+
+
+## Quick start:
+
+1. `$ django-admin.py startproject --template=https://github.com/arocks/edge/archive/master.zip --extension=py,md,html,env my_proj`
+2. `$ cd Magic_Eye`
+3. `$ pip install -r requirements.txt `
+4. `$ cd src`
+5. `$ cp Magic_Eye/settings/local.sample.env Magic_Eye/settings/local.env`
+6. `$ python manage.py migrate`
+
+More information at: [http://django-edge.readthedocs.org/][docs] ✨ 🍰 ✨
+
+[docs]: http://django-edge.readthedocs.org/
+
+
+## Recommended Installation (with `pipenv`)
+1. `$ pip install --user --upgrade pipenv` ([Install pipenv system-wide or locally](https://docs.pipenv.org/) but outside a virtualenv)
+2. `$ mkdir my_proj` (choose a better name than `myDjangoPro3` for your project)
+
+3. `$ pipenv install --dev`
+4. `$ pipenv shell`
+5. `$ cp src/myDjangoPro3/settings/local.sample.env src/my_proj/settings/local.env` (or rename this file)
+6. `$ cd src`
+7. `$ python manage.py migrate`
+8. `$ python manage.py createsuperuser`
+9. `$ python manage.py runserver`
+
+Rest of this README will be copied to the generated project.
+
+--------------------------------------------------------------------------------------------
+
+{% endcomment %}
+
+# {{ Magic Eye }}
+
+{{ Magic Eye }} is a _short description_. It is built with [Python][0] using the [Django Web Framework][1].
+
+This project has the following basic apps:
+
+* App1 (which decide the allowed persons)
+* App2 (which monitor all visitors)
+* 
+
+## Installation
+
+### Quick start
+
+To set up a development environment quickly, first install Python 3. It
+comes with virtualenv built-in. So create a virtual env by:
+
+    1. `$ python3 -m venv {{ project_name }}`
+    2. `$ . {{ project_name }}/bin/activate`
+
+Install all dependencies:
+
+    pip install -r requirements.txt
+
+Run migrations:
+
+    python manage.py migrate
+
+### Detailed instructions
+
+Take a look at the docs for more information.
+
+[0]: https://www.python.org/
+[1]: https://www.djangoproject.com/
